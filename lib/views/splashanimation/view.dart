@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rafiq/views/SplashAnimation2/view.dart';
 
 class SplashAnimationView extends StatefulWidget {
@@ -15,7 +16,7 @@ class _SplashAnimationViewState extends State<SplashAnimationView> {
   @override
   void initState() {
     super.initState();
-    _navigateToNextScreen(); // 2. Call the navigation function on initialization
+    _navigateToNextScreen();
   }
 
   void _navigateToNextScreen() {
@@ -33,12 +34,11 @@ class _SplashAnimationViewState extends State<SplashAnimationView> {
       backgroundColor: const Color(0xFF1564BF),
       body: Center(
         child: BackInDown(
-          // Keep the duration for the visual animation
           duration: Duration(seconds: splashDurationSeconds),
           child: Image.asset(
             "assets/images/Rafiq_logo_white.png",
-            height: 400,
-            width: 400,
+            height: 400.h,
+            width: 400.w,
           ),
         ),
       ),
